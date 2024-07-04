@@ -15,7 +15,7 @@ router.put("/images", auth, upload, Controller.imageController)
 router.post("/verifyAndAttributes", auth, Controller.verifyAndAttributes);
 router.get("/userdetails", auth, Controller.userdetails)
 router.post("/finalUpdate", auth, finalUpdateValidation, Controller.finalUpdate)
-router.get("/forgetPasswordAndSendMail", auth, Controller.forgetPasswordAndSendMail)
+router.get("/forgetPasswordAndSendMail", Controller.forgetPasswordAndSendMail)
 router.get("/forgetPassword/:token", Controller.forgetPassword1)
 router.post("/forgetPassword/:token", Controller.forgetPassword)
 
