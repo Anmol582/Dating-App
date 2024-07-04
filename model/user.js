@@ -22,9 +22,12 @@ let userSchema = new mongoose.Schema({
     referralCode: {
         type: String,
     },
+    fullName: {
+        type: String,
+        default: ""
+    },
     age: {
         type: Number,
-
     },
     gender: {
         type: String,
@@ -81,6 +84,9 @@ let userSchema = new mongoose.Schema({
     lookingFor: {
         type: String,
     },
+    tribeIrrelevant:{
+        type: Boolean
+    },
     aboutMe: {
         type: String,
     },
@@ -98,6 +104,14 @@ let userSchema = new mongoose.Schema({
     },
     otpVerify: {
     type: String,
+    },
+    loginStatus: {
+        type: Number,
+        default: 0,
+    },
+    verificationStatus: {
+        type: String,
+        default: "verification"
     }
 }, { timestamps: true })
 module.exports = mongoose.model("user", userSchema)
